@@ -1,9 +1,11 @@
 import axios from "axios"
 import React, { useContext, useEffect, useState } from "react"
 import { Context } from "../context/UseContext"
+import Spinner from "./Spinner"
 
 const MostrarFoto = () => {
   const [perrofoto, setPerroFoto] = useState("")
+  const [cargando, setCargando] = useState(false)
 
   const context = useContext(Context)
 
@@ -11,9 +13,13 @@ const MostrarFoto = () => {
 
   useEffect(() => {
     const consultaApi = async () => {
+      setCargando(true)
       const url = `https://dog.ceo/api/breed/${foto}/images/random`
       const res = await axios.get(url)
       setPerroFoto(res.data.message)
+      setTimeout(() => {
+        setCargando(false)
+      }, 2000)
     }
 
     consultaApi()
@@ -23,8 +29,13 @@ const MostrarFoto = () => {
       <div className='text-6xl font-extrabold text-center uppercase p-10'>
         {foto}
       </div>
+
       <div className='flex justify-center items-center mt-10'>
-        <img src={perrofoto} className='w-96 h-96 rounded-xl ' />
+        {cargando ? (
+          <Spinner />
+        ) : (
+          <img src={perrofoto} className='w-96 h-96 rounded-xl ' />
+        )}
       </div>
     </div>
   )
