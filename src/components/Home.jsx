@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div className='container'>
       <h1 className='text-4xl lg:text-6xl font-extrabold text-center p-10'>
-        Api de Perro
+        Razas de Perro
       </h1>
       <div className='flex justify-center items-center'>
         <div className=' grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-5 p-5 lg:gap-10 lg:p-10'>
