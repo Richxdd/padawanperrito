@@ -13,8 +13,8 @@ const Letra = () => {
 
   return (
     <>
-      <div className='text-6xl font-extrabold text-center p-10'>
-        Perros que incian con la letra{" "}
+      <div className='text-4xl lg:text-6xl font-extrabold text-center p-10'>
+        Perros que incian con la letra
         <span className='uppercase'>{letras}</span>
       </div>
       <div className='flex flex-col justify-center items-center gap-5 p-10'>

@@ -15,7 +15,7 @@ const Letras = ({ letra }) => {
     <Link
       to='/letra'
       onClick={handleClick}
-      className='w-28 h-28 bg-black flex justify-center items-center cursor-pointer rounded-2xl'
+      className='w-24 h-24 lg:w-28 lg:h-28 bg-black flex justify-center items-center cursor-pointer rounded-2xl'
     >
       <div>
         <label className='text-white text-5xl uppercase font-bold cursor-pointer'>

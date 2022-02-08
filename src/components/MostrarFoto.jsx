@@ -26,7 +26,7 @@ const MostrarFoto = () => {
   }, [foto])
   return (
     <div>
-      <div className='text-6xl font-extrabold text-center uppercase p-10'>
+      <div className='text-4xl lg:text-6xl font-extrabold text-center uppercase p-10'>
         {foto}
       </div>
 
@@ -34,7 +34,10 @@ const MostrarFoto = () => {
         {cargando ? (
           <Spinner />
         ) : (
-          <img src={perrofoto} className='w-96 h-96 rounded-xl ' />
+          <img
+            src={perrofoto}
+            className='w-80 h-80 lg:w-96 lg:h-96 rounded-xl '
+          />
         )}
       </div>
     </div>

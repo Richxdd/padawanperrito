@@ -14,10 +14,10 @@ const PerroFoto = ({ letra }) => {
     <Link
       to='/foto'
       onClick={handleClick}
-      className='bg-black flex justify-center w-96 rounded-xl cursor-pointer '
+      className='bg-black flex justify-center w-80 lg:w-96 rounded-xl cursor-pointer '
     >
       <div>
-        <label className='text-white text-4xl font-bold uppercase cursor-pointer '>
+        <label className='text-white text-2xl lg:text-4xl font-bold uppercase cursor-pointer '>
           {letra}
         </label>
       </div>
